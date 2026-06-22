@@ -1,0 +1,12 @@
+RECIPE: balance; rewrite -z; rewrite -z; resub -z; rewrite -z; resub; rewrite; resub; rewrite -z; rewrite; rewrite -z; resub -z; resub; rewrite; rewrite -z; rewrite; balance; refactor -z; rewrite; refactor; 
+usage: read [-mcbgh] <file>
+	         replaces the current network by the network read from <file>
+	         by calling the parser that matches the extension of <file>
+	         (to read a hierarchical design, use "read_hie")
+	-m     : toggle reading mapped Verilog [default = no]
+	-c     : toggle network check after reading [default = yes]
+	-b     : toggle reading barrier buffers [default = no]
+	-g     : toggle reading and flattening into &-space [default = no]
+	-h     : prints the command summary
+	file   : the name of a file to read
+======== ABC command line "read EPFL Circuits/arithmetic/adder.v; strash; balance; write_bench dataset/bench_files/adder_run77_step0.bench; rewrite -z; write_bench dataset/bench_files/adder_run77_step1.bench; rewrite -z; write_bench dataset/bench_files/adder_run77_step2.bench; resub -z; write_bench dataset/bench_files/adder_run77_step3.bench; rewrite -z; write_bench dataset/bench_files/adder_run77_step4.bench; resub; write_bench dataset/bench_files/adder_run77_step5.bench; rewrite; write_bench dataset/bench_files/adder_run77_step6.bench; resub; write_bench dataset/bench_files/adder_run77_step7.bench; rewrite -z; write_bench dataset/bench_files/adder_run77_step8.bench; rewrite; write_bench dataset/bench_files/adder_run77_step9.bench; rewrite -z; write_bench dataset/bench_files/adder_run77_step10.bench; resub -z; write_bench dataset/bench_files/adder_run77_step11.bench; resub; write_bench dataset/bench_files/adder_run77_step12.bench; rewrite; write_bench dataset/bench_files/adder_run77_step13.bench; rewrite -z; write_bench dataset/bench_files/adder_run77_step14.bench; rewrite; write_bench dataset/bench_files/adder_run77_step15.bench; balance; write_bench dataset/bench_files/adder_run77_step16.bench; refactor -z; write_bench dataset/bench_files/adder_run77_step17.bench; rewrite; write_bench dataset/bench_files/adder_run77_step18.bench; refactor; write_bench dataset/bench_files/adder_run77_step19.bench; read_lib abc/NangateOpenCellLibrary_typical.lib; map; print_stats -p"

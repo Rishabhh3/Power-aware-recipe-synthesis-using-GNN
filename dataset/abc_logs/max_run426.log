@@ -1,0 +1,12 @@
+RECIPE: rewrite; refactor -z; resub; resub -z; refactor -z; resub; refactor; rewrite; refactor -z; resub -z; resub; resub -z; balance; resub -z; rewrite -z; rewrite; rewrite; refactor; resub; resub; 
+usage: read [-mcbgh] <file>
+	         replaces the current network by the network read from <file>
+	         by calling the parser that matches the extension of <file>
+	         (to read a hierarchical design, use "read_hie")
+	-m     : toggle reading mapped Verilog [default = no]
+	-c     : toggle network check after reading [default = yes]
+	-b     : toggle reading barrier buffers [default = no]
+	-g     : toggle reading and flattening into &-space [default = no]
+	-h     : prints the command summary
+	file   : the name of a file to read
+======== ABC command line "read EPFL Circuits/arithmetic/max.v; strash; rewrite; write_bench dataset/bench_files/max_run426_step0.bench; refactor -z; write_bench dataset/bench_files/max_run426_step1.bench; resub; write_bench dataset/bench_files/max_run426_step2.bench; resub -z; write_bench dataset/bench_files/max_run426_step3.bench; refactor -z; write_bench dataset/bench_files/max_run426_step4.bench; resub; write_bench dataset/bench_files/max_run426_step5.bench; refactor; write_bench dataset/bench_files/max_run426_step6.bench; rewrite; write_bench dataset/bench_files/max_run426_step7.bench; refactor -z; write_bench dataset/bench_files/max_run426_step8.bench; resub -z; write_bench dataset/bench_files/max_run426_step9.bench; resub; write_bench dataset/bench_files/max_run426_step10.bench; resub -z; write_bench dataset/bench_files/max_run426_step11.bench; balance; write_bench dataset/bench_files/max_run426_step12.bench; resub -z; write_bench dataset/bench_files/max_run426_step13.bench; rewrite -z; write_bench dataset/bench_files/max_run426_step14.bench; rewrite; write_bench dataset/bench_files/max_run426_step15.bench; rewrite; write_bench dataset/bench_files/max_run426_step16.bench; refactor; write_bench dataset/bench_files/max_run426_step17.bench; resub; write_bench dataset/bench_files/max_run426_step18.bench; resub; write_bench dataset/bench_files/max_run426_step19.bench; read_lib abc/NangateOpenCellLibrary_typical.lib; map; print_stats -p"

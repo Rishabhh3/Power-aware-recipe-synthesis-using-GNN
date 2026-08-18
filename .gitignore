@@ -1,3 +1,6 @@
 .vscode/
 abc.history
 dataset_generator
+edaenv/
+data/
+abc/

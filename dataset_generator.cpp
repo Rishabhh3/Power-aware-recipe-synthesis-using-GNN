@@ -11,12 +11,12 @@ using namespace std;
 namespace fs = filesystem;
 
 // --- Configuration ---
-const string VERILOG_DIR = "data/epfl_circuits/arithmetic"; // Updated to actual dir for MacOS compatibility
+const string VERILOG_DIR = "data/epfl_circuits/arithmetic"; 
 const string OUTPUT_BENCH_DIR = "data/bench_files";
 const string OUTPUT_LOG_DIR = "data/abc_logs";
 const string TECH_LIB_PATH = "abc/NangateOpenCellLibrary_typical.lib";
 
-const string ABC_BINARY = "./abc/abc"; // Updated for Mac
+const string ABC_BINARY = "./abc/abc"; 
 
 const int RECIPE_LENGTH = 20;
 const int RECIPES_PER_CIRCUIT = 1000;
@@ -27,7 +27,7 @@ const vector<string> COMMAND_POOL = {
     "resub", "resub -z", "balance"
 };
 
-// --- Helper: Generate Random Recipe ---
+// --- Generate Random Recipe ---
 vector<string> generate_recipe() {
     thread_local mt19937 generator(random_device{}());
     uniform_int_distribution<int> distribution(0, COMMAND_POOL.size() - 1);
@@ -118,6 +118,7 @@ int main() {
     vector<thread> workers;
     for (int i = 0; i < NUM_THREADS; ++i) {
         workers.emplace_back(worker_thread, i, ref(verilog_files));
+        //works like  workers.push_back(std::thread(worker_thread, i, std::ref(verilog_files)));
     }
 
     // Wait for all threads to finish

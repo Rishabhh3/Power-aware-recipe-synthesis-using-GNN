@@ -5,8 +5,8 @@ from pathlib import Path
 import concurrent.futures
 
 # Configuration
-LOG_DIR = Path("dataset/abc_logs")
-OUTPUT_CSV = Path("dataset/labels.csv")
+LOG_DIR = Path("data/abc_logs")
+OUTPUT_CSV = Path("data/labels.csv")
 
 # Regex Patterns (Tailored exactly to your successful log output)
 # Extracts the recipe string
